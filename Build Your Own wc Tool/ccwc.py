@@ -37,3 +37,14 @@ else:
     first_arg = sys.argv[1]
     file_operate(first_arg, sys.argv[2])
 
+
+####### How does it work ########
+## This works exactly in the same manner as the wc command in Unix
+## Inorder for it to work, please set an alias to the python script, ex:
+## alias ccwc='python "/c/Users/skrout/Documents/Python Scripts/Build Your Own wc Tool/ccwc.py"'
+## then run below commands, which produces similar result on test.txt as that of wc command
+## ccwc -c test.txt
+## ccwc -l test.txt
+## ccwc -m test.txt
+## ccwc -w test.txt
+## cat test.txt | ccwc -l
