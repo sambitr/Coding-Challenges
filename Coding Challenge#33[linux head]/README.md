@@ -23,7 +23,7 @@ Release date: May 1, 1994 [eBook #132]
 Language: English
 
 Original publication: , 1910
-########## ================== \n
+########## ================== <br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py
 hi my name is sambit
 hi my name is sambit
@@ -45,14 +45,14 @@ line 9
 line 9
 line 10
 line 10
-########## ==================
+########## ================== <br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 1 text.txt
 ﻿The Project Gutenberg eBook of The Art of War
-########## ==================
+########## ================== <br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>echo "Hello, World" >> test2.txt
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 1 text2.txt
 Hello, World
-########## ==================
+########## ================== <br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 2 text2.txt
 Hello, World
 
@@ -63,7 +63,7 @@ Hello, World
 
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
-########## ==================
+########## ================== <br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 10 text.txt
 ﻿The Project Gutenberg eBook of The Art of War
 
@@ -87,19 +87,19 @@ before using this eBook.
 
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
-########## ==================
+########## ==================<br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -c 10 text.txt
 ﻿The Proje
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
-########## ==================
+########## ==================<br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -c 31 text.txt
 ﻿The Project Gutenberg eBook of
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
-########## ==================
+########## ==================<br>
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -c 31 text2.txt
 Hello, World
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
-########## ==================
+########## ==================<br>
