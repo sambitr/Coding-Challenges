@@ -103,3 +103,40 @@ Hello, World
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
 <br>########## ==================<br>
+
+C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 10 text.txt text2.txt
+==> text.txt <==
+﻿The Project Gutenberg eBook of The Art of War
+
+
+
+This ebook is for the use of anyone anywhere in the United States and
+
+most other parts of the world at no cost and with almost no restrictions
+
+whatsoever. You may copy it, give it away or re-use it under the terms
+
+of the Project Gutenberg License included with this ebook or online
+
+at www.gutenberg.org. If you are not located in the United States,
+
+you will have to check the laws of the country where you are located
+
+before using this eBook.
+
+
+
+==> text2.txt <==
+Hello, World
+
+
+
+
+
+
+
+
+
+
+C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 10 text.txt
+<br>########## ================== <br>
