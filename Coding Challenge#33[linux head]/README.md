@@ -1,5 +1,4 @@
-C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py text.txt
-Challege Link:
+### Challege Link:
 https://codingchallenges.substack.com/p/coding-challenge-33-head
 
 ﻿The Project Gutenberg eBook of The Art of War
