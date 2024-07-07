@@ -23,7 +23,7 @@ Release date: May 1, 1994 [eBook #132]
 Language: English
 
 Original publication: , 1910
-########## ==================
+########## ================== \n
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py
 hi my name is sambit
 hi my name is sambit
