@@ -56,11 +56,8 @@ Hello, World
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 2 text2.txt
 Hello, World
 
-
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 3 text2.txt
 Hello, World
-
-
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
 <br>########## ================== <br>
@@ -82,8 +79,6 @@ at www.gutenberg.org. If you are not located in the United States,
 you will have to check the laws of the country where you are located
 
 before using this eBook.
-
-
 
 
 C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
@@ -129,14 +124,5 @@ before using this eBook.
 ==> text2.txt <==
 Hello, World
 
-
-
-
-
-
-
-
-
-
-C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>python head.py -n 10 text.txt
+C:\Users\kumar\Documents\Python Scripts\Coding-Challenges\Coding Challenge#33[linux head]>
 <br>########## ================== <br>
