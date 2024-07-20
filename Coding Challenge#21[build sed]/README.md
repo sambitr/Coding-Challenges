@@ -29,3 +29,9 @@ to support deletion
 
 $ ccsed /^$/d unquoted.txt
 <br>########## ================== <br>
+
+### Stepp: 6
+inplace edit and save
+
+$ ccsed -i 's/Life/Code/g' unquoted.txt 
+

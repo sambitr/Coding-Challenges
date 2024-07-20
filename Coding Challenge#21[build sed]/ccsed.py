@@ -1,7 +1,18 @@
 import re
 import sys
 
-def substitution(file_name, option, what_to_sub, what_to_sub_with, operate_on = "g"):
+def substitutionWithoutSave(file_name, option, what_to_sub, what_to_sub_with, operate_on = "g"):
+    print(f"file_name={file_name}, option={option}, what_to_sub={what_to_sub}, what_to_sub_with={what_to_sub_with}, operate_on={operate_on}")
+    with open(file_name, "r+") as f:
+        file = f.read()
+
+        file_modified = re.sub(what_to_sub, what_to_sub_with, file)
+        print(file_modified)
+        # f.seek(0, 0)
+        # f.write(file_modified)
+        # f.truncate()
+
+def substitutionWithSave(file_name, option, what_to_sub, what_to_sub_with, operate_on = "g"):
     print(f"file_name={file_name}, option={option}, what_to_sub={what_to_sub}, what_to_sub_with={what_to_sub_with}, operate_on={operate_on}")
     with open(file_name, "r+") as f:
         file = f.read()
@@ -51,6 +62,7 @@ def seddel(option, filename):
 ## take this into consideration when accepting command line arguments
 
 if sys.argv[1] == "-n": 
+    print("-n")
     options = sys.argv[2]
     #print(sys.argv[1], sys.argv[2])
     try: #ccsed -n '2,4p' file_name
@@ -61,19 +73,33 @@ if sys.argv[1] == "-n":
         print(options_list)
         sedpatternprint(sys.argv[1], options_list[1],options_list[2], sys.argv[3])
 elif sys.argv[1].upper() == "G":
+    print("G")
     file_name = sys.argv[2]
     seddoublespace(sys.argv[1], file_name)
     
-elif sys.argv[1].split("/")[1] == "^$":
+elif sys.argv[1] == "-i": ## ccsed -i s/abc/def/g file_name
+    print("calling sed without saving")
+    options = sys.argv[2].split("/")
+    file_name = sys.argv[3]
+    if options[0].lower() == "s":
+        try:
+            if options[3].lower() != " ":
+                substitutionWithSave(file_name, "s", options[1], options[2], options[3].lower())
+        except IndexError:
+            substitutionWithSave(file_name, "s", options[1], options[2])
+
+elif sys.argv[1].split("/")[1] == "^$": ## ccsed /^$/d unquoted.txt
+    print("calling seddel")
     seddel(sys.argv[1], sys.argv[2])
 
 else: #ccsed s/this/that/g file_name
+    print("sed without save")
     options = sys.argv[1]
     file_name = sys.argv[2]
     options_list = options.split("/")
     if options_list[0].lower() == "s":
         try:
             if options_list[3].lower() != " ":
-                substitution(file_name, "s", options_list[1], options_list[2], options_list[3].lower())
+                substitutionWithoutSave(file_name, "s", options_list[1], options_list[2], options_list[3].lower())
         except IndexError:
-            substitution(file_name, "s", options_list[1], options_list[2])
+            substitutionWithoutSave(file_name, "s", options_list[1], options_list[2])
