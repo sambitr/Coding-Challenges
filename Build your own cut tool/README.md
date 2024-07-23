@@ -3,7 +3,6 @@
 $ alias ccsed="python cut.py"
 
 ### Step: 1
-<br>########## ================== <br>
 
 ```
 $ cut -f2 sample.tsv
@@ -15,8 +14,6 @@ f1
 21
 ```
 
-<br>########## ================== <br>
-
 ### Step: 2
 
 ```
@@ -27,5 +24,3 @@ Song title
 "Adore You"
 "Africa"
 ```
-
-<br>########## ================== <br>
