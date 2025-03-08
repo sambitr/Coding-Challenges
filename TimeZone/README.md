@@ -75,3 +75,6 @@ Converted Time in JST timezone is: 2025-03-09 01:40:25.710264+09:00
 
 ## Step 4
 As I am building it on a script basis and not a GUI basis, this section is not possible
+
+## Step 5
+pytz module has inbuild capability to switch over the day light savings related changes.
