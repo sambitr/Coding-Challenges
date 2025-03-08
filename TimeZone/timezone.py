@@ -32,8 +32,6 @@ def validate_timezones(source_tz, dest_tz_list):
             print(f"Error: Invalid destination timezone '{dest_tz}'. Run with --help to see available options.")
             sys.exit(1)
 
-    return source_tz_new, [timezone_map.get(tz, tz) for tz in dest_tz_list]
-
 def main(source_tz, dest_tz_list):
 
     converted_times = []
@@ -49,10 +47,6 @@ def main(source_tz, dest_tz_list):
 
         converted_time = source_time.astimezone(pytz.timezone(dest_tz_new))
         converted_times.append((dest_tz, converted_time))
-        #print(f"Converted Time in {dest_tz} timezone is: {converted_time}")
-    converted_times.sort(key=lambda x: x[1])
-
-    for dest_tz, converted_time in converted_times:
         print(f"Converted Time in {dest_tz} timezone is: {converted_time}")
 
 if __name__ == "__main__":
@@ -71,7 +65,8 @@ if __name__ == "__main__":
     parser.add_argument("--from-timezone", required=True, help=f"Source Timezone name from list {timezones}")
     parser.add_argument("--to-timezone", nargs="+", required=True, help=f"One or more target Timezone names from {timezones}. For multiple time zones separated by space")
     args = parser.parse_args()
-    validated_source_tz, validated_dest_tz_list = validate_timezones(args.from_timezone, args.to_timezone)
+
+    ## Validate timezone and inform users if they have provided a timezone name that is not in the timezone list
+    validate_timezones(args.from_timezone, args.to_timezone)
 
     main(args.from_timezone, args.to_timezone)
-    #main(validated_source_tz, validated_dest_tz_list)
