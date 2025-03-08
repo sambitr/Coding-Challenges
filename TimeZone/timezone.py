@@ -3,13 +3,14 @@ import pytz
 import sys
 import argparse
 
-timezones = ["GMT", "IST", "CET", "PDT", "EDT", "MDT"]
+timezones = ["GMT", "IST", "CET", "PST", "EST", "CST", "JST", "UTC"]
 
 timezone_map = {
         "IST": "Asia/Kolkata",
         "PST": "America/Los_Angeles",
         "EST": "America/New_York",
         "CET": "Europe/Berlin",
+        "CST": "America/Chicago",
         "JST": "Asia/Tokyo",
         "GMT": "GMT",  
         "UTC": "UTC"       
