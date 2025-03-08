@@ -13,3 +13,33 @@ usage:
 python timezone.py --from-timezone <source time zone> --to-timezone <destination time zone(s)>
 python timezone.py --from-timezone GMT  --to-timezone IST PST
 ```
+
+## Step 2
+Added section to sort the timezone in result.
+
+Before sortig
+
+```
+python timezone.py --from-timezone IST  --to-timezone IST PST JST
+source timezone: IST
+Source time in IST timezone is 2025-03-08 22:09:40.046779+05:30
+Converted Time in IST timezone is: 2025-03-08 22:09:40.046779+05:30
+Converted Time in JST timezone is: 2025-03-09 01:39:40.046779+09:00
+Converted Time in PST timezone is: 2025-03-08 08:39:40.046779-08:00
+```
+After sorting
+
+```
+python timezone.py --from-timezone IST  --to-timezone IST PST JST
+source timezone: IST
+Source time in IST timezone is 2025-03-08 22:10:25.710264+05:30
+Converted Time in IST timezone is: 2025-03-08 22:10:25.710264+05:30
+Converted Time in PST timezone is: 2025-03-08 08:40:25.710264-08:00
+Converted Time in JST timezone is: 2025-03-09 01:40:25.710264+09:00
+```
+
+## Step 3
+24 hour time zone is already done. This came by defalt with pytz python module
+
+## Step 4
+As I am building it on a script basis and not a GUI basis, this section is not possible

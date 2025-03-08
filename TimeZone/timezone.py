@@ -35,6 +35,7 @@ def validate_timezones(source_tz, dest_tz_list):
 
 def main(source_tz, dest_tz_list):
 
+    converted_times = []
     format = "%Y-%m-%d %H:%M:%S"
 
     print(f"source timezone: {source_tz}")
@@ -46,6 +47,11 @@ def main(source_tz, dest_tz_list):
         dest_tz_new = timezone_map.get(dest_tz, dest_tz)
 
         converted_time = source_time.astimezone(pytz.timezone(dest_tz_new))
+        converted_times.append((dest_tz, converted_time))
+        #print(f"Converted Time in {dest_tz} timezone is: {converted_time}")
+    converted_times.sort(key=lambda x: x[1])
+
+    for dest_tz, converted_time in converted_times:
         print(f"Converted Time in {dest_tz} timezone is: {converted_time}")
 
 if __name__ == "__main__":
@@ -66,5 +72,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     validated_source_tz, validated_dest_tz_list = validate_timezones(args.from_timezone, args.to_timezone)
 
-    #main(args.from_timezone, args.to_timezone)
-    main(validated_source_tz, validated_dest_tz_list)
+    main(args.from_timezone, args.to_timezone)
+    #main(validated_source_tz, validated_dest_tz_list)
