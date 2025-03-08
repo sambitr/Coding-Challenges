@@ -1,3 +1,35 @@
+Coding Challenge link: https://codingchallenges.substack.com/p/coding-challenge-85-time-zone-converter
+
+## Usage:
+
+```
+$ python timezone.py --help
+usage: timezone.py [-h] --from-timezone FROM_TIMEZONE --to-timezone TO_TIMEZONE [TO_TIMEZONE ...]
+
+    Convert time from one timezone to single/multiple target timezones.
+
+    Example Usage:
+      python timezone.py --from-timezone "UTC" --to-timezone "IST" "PST" "JST"
+
+    Available Timezones:
+      IST, PST, EST, CET, JST, GMT, UTC
+
+
+
+options:
+  -h, --help            show this help message and exit
+  --from-timezone FROM_TIMEZONE
+                        Source Timezone name from list ['GMT', 'IST', 'CET', 'PDT', 'EDT', 'MDT']
+  --to-timezone TO_TIMEZONE [TO_TIMEZONE ...]
+                        One or more target Timezone names from ['GMT', 'IST', 'CET', 'PDT', 'EDT', 'MDT']. For multiple time zones separated by space
+```
+Example: 1
+
+```
+$ python timezone.py --from-timezone IST  --to-timezone IST PST AST
+Error: Invalid destination timezone 'AST'. Run with --help to see available options.
+```
+
 ## Step 0
 Tech Stack: Python
 Execution method: script way. ./timezone.py
